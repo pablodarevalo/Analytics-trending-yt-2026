@@ -34,4 +34,4 @@ An engineering filter of **>100,000 views** was implemented to stabilize the int
 ## 📬 Contact
 * **Name:** Pablo Arévalo
 * **Role:** Industrial Engineering Student | Data Analyst
-* **LinkedIn:** [Insert your LinkedIn profile link here]
+* **LinkedIn:** www.linkedin.com/in/pablo-arevalo-8296b4199
