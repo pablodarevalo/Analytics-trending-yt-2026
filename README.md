@@ -29,6 +29,7 @@ Contrary to popular belief, the **Russian (RU) and Brazilian (BR)** markets lead
 
 ### 3. Statistical Reliability
 An engineering filter of **>100,000 views** was implemented to stabilize the interaction metric. This reduced the Coefficient of Variation (CV) from **90.7 to 1.1**, successfully removing noise caused by low-reach videos.
+<img width="1306" height="702" alt="image" src="https://github.com/user-attachments/assets/8962c187-1feb-4e74-9e1d-70650638854c" />
 
 ---
 ## 📬 Contact
