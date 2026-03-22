@@ -78,6 +78,20 @@ MX    16000
 ```
 
 ---
+
+### 1.4 Checking of null values
+```
+print("--- empty values by columns ---")
+print(df_world.isnull().sum())
+
+print(f"\nduplicate rows: {df_world.duplicated().sum()}")
+
+print("\n--- kind of data ---")
+print(df_world.dtypes)
+```
+
+---
+
 ## 📬 Contact
 * **Name:** Pablo Arévalo
 * **Role:** Industrial Engineer | Data Analyst
