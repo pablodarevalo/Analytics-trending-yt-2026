@@ -36,12 +36,23 @@ path = kagglehub.dataset_download("bsthere/youtube-trending-videos-stats-2026")
 files = [f for f in os.listdir(path) if f.endswith('.csv')]
 print(f"✅ ¡Success! Data ready. Files: {files}")
 ``` 
-### 2. The Engagement Paradox (RU & BR)
-Contrary to popular belief, the **Russian (RU) and Brazilian (BR)** markets lead audience loyalty with an **Engagement Rate > 4.5%**, proving to be significantly more participative communities than their Anglo-Saxon counterparts.
+### 1.2 Data quantity to analyze
+```python 
+import glob
 
-### 3. Statistical Reliability
-An engineering filter of **>100,000 views** was implemented to stabilize the interaction metric. This reduced the Coefficient of Variation (CV) from **90.7 to 1.1**, successfully removing noise caused by low-reach videos.
-<img width="1306" height="702" alt="image" src="https://github.com/user-attachments/assets/8962c187-1feb-4e74-9e1d-70650638854c" />
+all_files = glob.glob(os.path.join(path, "*.csv"))
+
+conteiner = []
+for filename in all_files:
+    country_code = os.path.basename(filename).split('_')[0]
+    df_temp = pd.read_csv(filename, index_col=None, header=0)
+    df_temp['region'] = country_code
+    conteiner.append(df_temp)
+
+df_world = pd.concat(conteiner, axis=0, ignore_index=True)
+
+print(f"Total world records: {len(df_world)}")
+``` 
 
 ---
 ## 📬 Contact
