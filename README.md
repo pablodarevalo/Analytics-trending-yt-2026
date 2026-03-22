@@ -20,10 +20,11 @@ To answer these questions, a comprehensive ETL (Extraction, Transformation, and 
 * **Git/GitHub**
 * **Jupyter Notebooks**
 
-## 🚀 Key Insights & Results
+## 🔍 Development & Analysis (Results)
 
-### 1. Global Peak Identification
-An optimal release window was detected at **12:00 UTC**. The **Music** genre dominates global view volume at this time, suggesting a synchronization of massive global releases.
+### 1. Data Extraction & Unification
+To ensure reproducibility and handle large volumes of data, I implemented an automated extraction pipeline using the kagglehub library. This allows the project to fetch the latest 24-hour global snapshot directly from the source.
+<img width="674" height="219" alt="image" src="https://github.com/user-attachments/assets/ae375424-f3ca-492f-aedc-94a1a0165232" />
 
 ### 2. The Engagement Paradox (RU & BR)
 Contrary to popular belief, the **Russian (RU) and Brazilian (BR)** markets lead audience loyalty with an **Engagement Rate > 4.5%**, proving to be significantly more participative communities than their Anglo-Saxon counterparts.
