@@ -24,7 +24,7 @@ To answer these questions, a comprehensive ETL (Extraction, Transformation, and 
 
 ### 1. Data Extraction & Unification
 To ensure reproducibility and handle large volumes of data, I implemented an automated extraction pipeline using the kagglehub library. This allows the project to fetch the latest 24-hour global snapshot directly from the source.
-``` 
+```python 
 import kagglehub
 import pandas as pd
 import os
