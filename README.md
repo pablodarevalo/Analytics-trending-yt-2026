@@ -36,7 +36,7 @@ path = kagglehub.dataset_download("bsthere/youtube-trending-videos-stats-2026")
 files = [f for f in os.listdir(path) if f.endswith('.csv')]
 print(f"✅ ¡Success! Data ready. Files: {files}")
 ``` 
-### 1.2 Data quantity to analyze
+### 1.2 Data quantity to analyze:
 ```python 
 import glob
 
@@ -53,6 +53,7 @@ df_world = pd.concat(conteiner, axis=0, ignore_index=True)
 
 print(f"Total world records: {len(df_world)}")
 ``` 
+Finally we have 178.412 world records to analyze.
 
 ---
 ## 📬 Contact
