@@ -24,8 +24,18 @@ To answer these questions, a comprehensive ETL (Extraction, Transformation, and 
 
 ### 1. Data Extraction & Unification
 To ensure reproducibility and handle large volumes of data, I implemented an automated extraction pipeline using the kagglehub library. This allows the project to fetch the latest 24-hour global snapshot directly from the source.
-<img width="674" height="219" alt="image" src="https://github.com/user-attachments/assets/ae375424-f3ca-492f-aedc-94a1a0165232" />
+``` 
+import kagglehub
+import pandas as pd
+import os
 
+# Professional API-based dataset download
+path = kagglehub.dataset_download("bsthere/youtube-trending-videos-stats-2026")
+
+# Inventory of regional files extracted
+files = [f for f in os.listdir(path) if f.endswith('.csv')]
+print(f"✅ ¡Success! Data ready. Files: {files}")
+``` 
 ### 2. The Engagement Paradox (RU & BR)
 Contrary to popular belief, the **Russian (RU) and Brazilian (BR)** markets lead audience loyalty with an **Engagement Rate > 4.5%**, proving to be significantly more participative communities than their Anglo-Saxon counterparts.
 
