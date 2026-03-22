@@ -55,6 +55,27 @@ print(f"Total world records: {len(df_world)}")
 ``` 
 Finally we have 178.412 world records to analyze.
 
+### 1.3 Data Cleaning & Regional Distribution :
+```python 
+df_world = df_world[df_world['region'] != 'data']
+print(df_world['region'].value_counts())
+```
+During the initial inspection, I identified 13 rows labeled as 'data' which corresponded to metadata files (e.g., data dictionaries) rather than actual video trends. These were filtered out to maintain the dataset's integrity.
+After cleaned data, the records distributions are:
+```
+Region
+GB    16400
+US    16400
+BR    16200
+CA    16200
+DE    16200
+FR    16200
+JP    16200
+KR    16200
+RU    16200
+IN    16199
+MX    16000
+```
 ---
 ## 📬 Contact
 * **Name:** Pablo Arévalo
