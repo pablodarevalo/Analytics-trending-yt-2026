@@ -61,7 +61,7 @@ df_world = df_world[df_world['region'] != 'data']
 print(df_world['region'].value_counts())
 ```
 During the initial inspection, I identified 13 rows labeled as 'data' which corresponded to metadata files (e.g., data dictionaries) rather than actual video trends. These were filtered out to maintain the dataset's integrity.
-After cleaned data, the records distributions are:
+After cleaning the data, the final record distribution per region is:
 ```
 Region
 GB    16400
@@ -76,6 +76,7 @@ RU    16200
 IN    16199
 MX    16000
 ```
+
 ---
 ## 📬 Contact
 * **Name:** Pablo Arévalo
