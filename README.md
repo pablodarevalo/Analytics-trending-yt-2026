@@ -78,8 +78,16 @@ MX    16000
 ```
 
 ---
+### 1.4 Column name´s to analyze 
+```
+print(df_world.columns)
+```
+As result we obtain  column names to analyze by country: 'video_id', 'trending_date', 'title', 'channel_title', 'views', 'likes','dislikes', 'publish_time', 'category_id', 'tags', 'comments', 'channel_id', 
+'description', 'region', 'hour_published','engagement_rate', 'genre' .
 
-### 1.4 Checking of null values
+
+
+### 1.5 Checking of null values
 ```
 print("--- empty values by columns ---")
 print(df_world.isnull().sum())
@@ -89,7 +97,7 @@ print(f"\nduplicate rows: {df_world.duplicated().sum()}")
 print("\n--- kind of data ---")
 print(df_world.dtypes)
 ```
-
+The Check found 58 empty values from engagement rate column.
 ---
 
 ## 📬 Contact
