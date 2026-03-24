@@ -79,7 +79,7 @@ MX    16000
 
 ---
 ### 1.4 Column name´s to analyze 
-```
+```python
 print(df_world.columns)
 ```
 As result we obtain  column names to analyze by country: 'video_id', 'trending_date', 'title', 'channel_title', 'views', 'likes','dislikes', 'publish_time', 'category_id', 'tags', 'comments', 'channel_id', 
@@ -88,7 +88,7 @@ As result we obtain  column names to analyze by country: 'video_id', 'trending_d
 
 
 ### 1.5 Checking of null values
-```
+```python
 print("--- empty values by columns ---")
 print(df_world.isnull().sum())
 
