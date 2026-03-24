@@ -98,7 +98,7 @@ print(df_world.dtypes)
 ```
 The check found 58 empty values from engagement rate column.
 
-### 🛠️ Data Transformation & Cleaning
+### 2. 🛠️ Data Transformation & Cleaning
 ```python
 
 #Columns and rows clean:
@@ -137,6 +137,28 @@ hour_published                  int32
 dtype: object
 
 After cleaning and transformation we obtain 178,399 records (13 metadata rows removed from the original dataset), now fully cleaned and without null values.
+
+### 3.📊 Data visualization 
+
+### 3.1. Evaluation of publications global distribution by hour:
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(style="whitegrid")
+plt.figure(figsize=(12, 6))
+
+# Bar Graphic: 
+sns.countplot(data=df_world, x='hour_published', palette='viridis', hue='hour_published', legend=False)
+
+plt.title('Publications global distribution by hour', fontsize=16)
+plt.xlabel('Hora del día (0-23)', fontsize=12)
+plt.ylabel('Cantidad de Videos', fontsize=12)
+
+plt.show()
+```
+<img width="1275" height="681" alt="image" src="https://github.com/user-attachments/assets/e31f00e1-3e79-4b78-83c5-069e2d334b12" />
+
 
 ---
 
