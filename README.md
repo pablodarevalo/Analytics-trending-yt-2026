@@ -105,10 +105,10 @@ The check found 58 empty values from engagement rate column.
 df_world = df_world.drop(columns=['column'], errors='ignore')
 df_world = df_world.dropna(subset=['video_id', 'publish_time', 'views'])
 
-#Imputing null descriptions to not loss that rows:
+#Imputing null descriptions to avoid losing those rows:
 df_world['description'] = df_world['description'].fillna('No description')
 
-# Date´s transformation (critic step) 
+# Date transformation (critical step) 
 df_world['publish_time'] = pd.to_datetime(df_world['publish_time'], errors='coerce')
 df_world['trending_date'] = pd.to_datetime(df_world['trending_date'], format='%y.%d.%m', errors='coerce')
 
@@ -136,7 +136,7 @@ publish_time      datetime64[us, UTC]
 hour_published                  int32
 dtype: object
 
-After cleaning and transformation we obtain 178.399 values, 13 less than original dataset, without null values.
+After cleaning and transformation we obtain 178,399 records (13 metadata rows removed from the original dataset), now fully cleaned and without null values.
 
 ---
 
