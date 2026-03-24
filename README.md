@@ -97,7 +97,7 @@ print(f"\nduplicate rows: {df_world.duplicated().sum()}")
 print("\n--- kind of data ---")
 print(df_world.dtypes)
 ```
-The Check found 58 empty values from engagement rate column.
+The check found 58 empty values from engagement rate column.
 ---
 
 ## 📬 Contact
