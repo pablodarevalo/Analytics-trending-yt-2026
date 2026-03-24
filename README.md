@@ -120,6 +120,14 @@ print(df_world[['publish_time', 'hour_published']].dtypes)
 df_world[['title', 'region', 'hour_published', 'engagement_rate']].head()
 
 ```
+✅ ¡ Clean and transformation done !
+total data processed: 178399
+
+Data kind update:
+publish_time      datetime64[us, UTC]
+hour_published                  int32
+dtype: object
+
 
 
 ---
