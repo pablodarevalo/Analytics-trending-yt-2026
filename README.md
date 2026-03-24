@@ -82,7 +82,7 @@ MX    16000
 ```python
 print(df_world.columns)
 ```
-As result we obtain  column names to analyze by country: **'video_id'**, **'trending_date'**, **'title'**, **'channel_title'**, **'views'**, **'likes'**,**'dislikes'**, **'publish_time'**, **'category_id'**, **'tags'**, **'comments'**, **'channel_id'**, **'description'**, **'region'**, **'hour_published'**,**'engagement_rate'**, **'genre' **.
+As result we obtain  column names to analyze by country: **'video_id'**, **'trending_date'**, **'title'**, **'channel_title'**, **'views'**, **'likes'**,**'dislikes'**, **'publish_time'**, **'category_id'**, **'tags'**, **'comments'**, **'channel_id'**, **'description'**, **'region'**, **'hour_published'**,**'engagement_rate'**, **'genre'**.
 
 
 
