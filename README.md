@@ -98,6 +98,30 @@ print(df_world.dtypes)
 ```
 The check found 58 empty values from engagement rate column.
 
+### 🛠️ Data Transformation & Cleaning
+```python
+df_world = df_world.drop(columns=['column'], errors='ignore')
+df_world = df_world.dropna(subset=['video_id', 'publish_time', 'views'])
+
+df_world['description'] = df_world['description'].fillna('No description')
+
+df_world['publish_time'] = pd.to_datetime(df_world['publish_time'], errors='coerce')
+df_world['trending_date'] = pd.to_datetime(df_world['trending_date'], format='%y.%d.%m', errors='coerce')
+
+df_world['hour_published'] = df_world['publish_time'].dt.hour
+
+df_world['engagement_rate'] = (df_world['likes'] + df_world['comments']) / df_world['views']
+
+print("✅ ¡ Clean and transformation done !")
+print(f"total data processed: {len(df_world)}")
+print("\nData kind update:")
+print(df_world[['publish_time', 'hour_published']].dtypes)
+
+df_world[['title', 'region', 'hour_published', 'engagement_rate']].head()
+
+```
+
+
 ---
 
 ## 📬 Contact
