@@ -98,6 +98,7 @@ print("\n--- kind of data ---")
 print(df_world.dtypes)
 ```
 The check found 58 empty values from engagement rate column.
+
 ---
 
 ## 📬 Contact
