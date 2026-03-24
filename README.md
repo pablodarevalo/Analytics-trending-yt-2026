@@ -105,20 +105,26 @@ The check found 58 empty values from engagement rate column.
 df_world = df_world.drop(columns=['column'], errors='ignore')
 df_world = df_world.dropna(subset=['video_id', 'publish_time', 'views'])
 
+#Imputing null descriptions to not loss that rows:
 df_world['description'] = df_world['description'].fillna('No description')
 
+# Date´s transformation (critic step) 
 df_world['publish_time'] = pd.to_datetime(df_world['publish_time'], errors='coerce')
 df_world['trending_date'] = pd.to_datetime(df_world['trending_date'], format='%y.%d.%m', errors='coerce')
 
+#Extracting hour from the datetime object:
 df_world['hour_published'] = df_world['publish_time'].dt.hour
 
+#Calculating engagement rate : (likes + Commentaries) / Views
 df_world['engagement_rate'] = (df_world['likes'] + df_world['comments']) / df_world['views']
 
+#Verification:
 print("✅ ¡ Clean and transformation done !")
 print(f"total data processed: {len(df_world)}")
 print("\nData kind update:")
 print(df_world[['publish_time', 'hour_published']].dtypes)
 
+#Preview: 
 df_world[['title', 'region', 'hour_published', 'engagement_rate']].head()
 
 ```
@@ -130,7 +136,7 @@ publish_time      datetime64[us, UTC]
 hour_published                  int32
 dtype: object
 
-
+After cleaning and transformation we obtain 178.399 values, 13 less than original dataset, without null values.
 
 ---
 
