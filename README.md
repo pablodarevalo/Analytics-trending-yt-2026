@@ -100,6 +100,8 @@ The check found 58 empty values from engagement rate column.
 
 ### 🛠️ Data Transformation & Cleaning
 ```python
+
+#Columns and rows clean:
 df_world = df_world.drop(columns=['column'], errors='ignore')
 df_world = df_world.dropna(subset=['video_id', 'publish_time', 'views'])
 
