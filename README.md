@@ -200,6 +200,37 @@ While the previous chart shows a massive upload peak at 15:00 UTC, this line cha
 
 - Strategic Opportunity: For creators, the "Golden Window" for high-loyalty interaction is during global off-peak hours.
 
+### 3.3. Top 3 Countries by Peak Activity
+```python
+# We order to obtain top three:
+counts = df_world.groupby(['hour_published', 'region']).size().reset_index(name='video_count')
+top_3_per_hour = counts.sort_values(['hour_published', 'video_count'], ascending=[True, False]).groupby('hour_published').head(3)
+
+# 2. Graph
+plt.figure(figsize=(18, 9)) 
+
+sns.barplot(
+    data=top_3_per_hour, 
+    x='hour_published', 
+    y='video_count', 
+    hue='region', 
+    palette='tab10',
+    width=0.8 
+)
+
+plt.title('Top 3 with high activity', fontsize=18)
+plt.xlabel('Publication hour (0-23)', fontsize=14)
+plt.ylabel('Videos Quantity', fontsize=14)
+
+
+plt.legend(title='Country / Región', bbox_to_anchor=(1.02, 1), loc='upper left', fontsize=10)
+plt.grid(axis='y', alpha=0.3)
+
+plt.show()
+```
+<img width="1719" height="812" alt="image" src="https://github.com/user-attachments/assets/d48baeb6-2dc7-4619-9741-b47fdee04142" />
+
+The chart uses a multi-country distribution to visualize how the global trending volume is distributed; while some countries have specific peak hours, the FR, JP, and BR trio maintains the highest density of uploads.
 
 ---
 
