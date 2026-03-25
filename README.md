@@ -168,6 +168,39 @@ As visualized in the distribution, the "Global Rush Hour" for trending content o
 
 - Efficiency: The sharp decline after 22:00 UTC reflects the end of the daily cycle for the Western Hemisphere’s digital activity.
 
+### 3.2. The Engagement Paradox: Quantity vs. Interaction
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# We group by hour and calculate average engagement
+hourly_engagement = df_world.groupby('hour_published')['engagement_rate'].mean().reset_index()
+
+plt.figure(figsize=(12, 6))
+sns.lineplot(data=hourly_engagement, x='hour_published', y='engagement_rate', 
+             marker='o', color='red', linewidth=2.5)
+
+plt.title('At what time are more interaction? (Average Engagement Rate by hour)', fontsize=16)
+plt.xlabel('Publication hour (00:00 - 23:00)', fontsize=12)
+plt.ylabel('Average Engagement Rate ', fontsize=12)
+plt.xticks(range(0, 24)) 
+plt.grid(True, alpha=0.3)
+
+plt.show()
+
+```
+<img width="1271" height="684" alt="image" src="https://github.com/user-attachments/assets/afb1624d-6a33-43ae-92d0-1f4f6d26cf37" />
+
+While the previous chart shows a massive upload peak at 15:00 UTC, this line chart reveals a completely different story regarding audience behavior.
+
+- Maximum Interaction: The highest Average Engagement Rate occurs between 22:00 and 03:00 UTC.
+
+- The "Saturated Market" Effect: At 15:00 UTC (the rush hour), engagement actually hits its lowest point. This proves that high competition for trending slots dilutes the audience's attention.
+
+- Strategic Opportunity: For creators, the "Golden Window" for high-loyalty interaction is during global off-peak hours.
+
+
 ---
 
 ## 📬 Contact
