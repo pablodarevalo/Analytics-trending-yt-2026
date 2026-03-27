@@ -232,6 +232,36 @@ plt.show()
 
 The chart uses a multi-country distribution to visualize how the global trending volume is distributed; while some countries have specific peak hours, the FR, JP, and BR trio maintains the highest density of uploads.
 
+### 3.4. Average Reach by Genre (Views) and Audience Loyalty by Genre (Engagement Rate)
+```python
+
+genres_map= {
+    10: 'Music',
+    20: 'Gaming',
+    1: 'Film & Animation',
+    17: 'Sports'
+}
+
+f_world['genre'] = df_world['category_id'].map(genres_map)
+
+df_generos = df_world[df_world['genre'].isin(['Music', 'Gaming', 'Film & Animation', 'Sports'])]
+
+fig, ax = plt.subplots(1, 2, figsize=(18, 7))
+
+sns.barplot(data=df_generos, x='genre', y='views', palette='viridis', ax=ax[0])
+ax[0].set_title('Average Reach by Genre (views)', fontsize=15)
+ax[0].set_ylabel('Average views')
+
+sns.barplot(data=df_generos, x='genre', y='engagement_rate', palette='magma', ax=ax[1])
+ax[1].set_title('Audience Loyalty by Genre (Engagement Rate)', fontsize=15)
+ax[1].set_ylabel('Average Engagement Rate')
+
+plt.tight_layout()
+plt.show()
+```
+<img width="1711" height="651" alt="image" src="https://github.com/user-attachments/assets/d5dbd037-14fc-4a15-9773-39dba69eb460" />
+
+
 ---
 
 ## 📬 Contact
