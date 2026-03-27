@@ -260,7 +260,13 @@ plt.tight_layout()
 plt.show()
 ```
 <img width="1711" height="651" alt="image" src="https://github.com/user-attachments/assets/d5dbd037-14fc-4a15-9773-39dba69eb460" />
+To understand which content types drive the platform, I compared the Average Reach (Views) against Audience Loyalty (Engagement Rate):
 
+**Music Dominance**: Music is the clear leader in both metrics. It achieves the highest average reach (~1.9M views) and the most significant loyalty, with an engagement rate near 20%. 
+
+**The Sports & Gaming Paradox**: While Sports content has a high reach (nearly 1.7M views), its engagement rate is much lower (~3%). This indicates that Sports content is widely consumed but generates less active participation compared to Music.
+
+**Niche Stability**: Categories like Film & Animation show lower volume but maintain a consistent, dedicated audience interaction.
 
 ---
 
