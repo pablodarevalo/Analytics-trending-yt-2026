@@ -269,8 +269,40 @@ To understand which content types drive the platform, I compared the Average Rea
 
 **Niche Stability**: Categories like Film & Animation show lower volume but maintain a consistent, dedicated audience interaction.
 
----
+### 3.5. Deep Dive: Music Category Temporal Analysis
 
+```python
+df_music = df_world[df_world['genre'] == 'Music']
+
+music_by_hour = df_music.groupby('hour_published')['views'].sum().reset_index()
+
+plt.figure(figsize=(14, 6))
+sns.lineplot(data=music_by_hour, x='hour_published', y='views', 
+             marker='o', color='darkorchid', linewidth=3)
+plt.ticklabel_format(style='plain', axis='y')
+
+plt.title('Consumption rate, at what time youtube listen more music?', fontsize=16)
+plt.xlabel('Publication hour (0-23)', fontsize=12)
+plt.ylabel('Total views (Impact)', fontsize=12)
+plt.xticks(range(0, 24))
+plt.grid(True, alpha=0.2)
+
+plt.show()
+
+```
+<img width="1531" height="680" alt="image" src="https://github.com/user-attachments/assets/32582a4f-3358-4100-8b5c-939c744ba3fa" />
+
+As previously identified, Music is the most impactful genre on the platform. Therefore, a dedicated temporal analysis of this category is essential to understand global consumption patterns. Based on UTC time, we can identify three primary peaks:
+
+- Early Morning Peak (04:00 UTC): A preliminary surge reaching 6B views.
+
+- Morning Momentum (09:00 UTC): A significant increase to 13B views, coinciding with the start of the workday in Western regions.
+
+- Global Prime Time (12:00 UTC): The most critical hour, peaking at 16B views.
+
+*Behavioral Trend*: After the midday peak, consumption gradually decreases until 23:00 UTC, where the cycle begins to trend upward again, marking the start of a new global interaction wave.
+
+---
 ## 📬 Contact
 * **Name:** Pablo Arévalo
 * **Role:** Industrial Engineer | Data Analyst
