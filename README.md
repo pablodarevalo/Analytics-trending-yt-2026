@@ -323,24 +323,24 @@ print(deviation_by_country)
 
 | | Mean | Std | CV |
 | :---: | :---: | :---: | :---: |
-| Views | 1.444214e+06 | 1.081464e+07 | 7.488257 |
-| Likes | 3.607090e+04  | 1.269590e+05 | 3.519707 |
+| Views | 1.44 M | 10.81 M | 7.48 |
+| Likes |36.07 K| 126.96 K | 3.51 |
 
 Deviation of views by region (ordered from largest to smallest):
 
 |***Region***| ***Deviation***|
 | :---: | :---: |
-| CA | 1.576685e+07 |
-| US |   1.510751e+07 |
-| MX |   1.434949e+07 |
-| FR |   1.393859e+07 |
-| GB |   1.384366e+07 |
-| KR |   8.506361e+06 |
-| BR |   6.605107e+06 |
-| DE |  5.303611e+06 |
-| JP |   5.255351e+06 |
-| RU |   4.882416e+06 |
-| IN |   4.439475e+06 |
+| CA | 15.77 M |
+| US |   15.11 M |
+| MX |   14.35 M |
+| FR |  13.94 M |
+| GB |   13.84 M |
+| KR |   8.51 M |
+| BR |   6.61 M |
+| DE |  5.30 M|
+| JP |  5.26 M |
+| RU |   4.88 M |
+| IN |  4.44 M |
 
 Name: views, dtype: float64
 
