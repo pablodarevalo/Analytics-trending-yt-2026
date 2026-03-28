@@ -322,9 +322,8 @@ print(deviation_by_country)
 ***Analysis result***: 
 
 | | Mean | Std | CV |
-| :--- | :---: | :---: | ---: |
+| :---: | :---: | :---: | :---: |
 | Views | 1.444214e+06 | 1.081464e+07 | 7.488257 |
-| :--- | :---: | :---: | ---: |
 | Likes | 3.607090e+04  | 1.269590e+05 | 3.519707 |
 
 Deviation of views by region (ordered from largest to smallest):
