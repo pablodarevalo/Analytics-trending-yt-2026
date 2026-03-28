@@ -326,6 +326,8 @@ print(deviation_by_country)
 | Views | 1.44 M | 10.81 M | 7.48 |
 | Likes |36.07 K| 126.96 K | 3.51 |
 | Comments | 1.25 K| 9.77 K | 7.79 |
+| Engagement | Inf| NaN | NaN |
+
 
 Deviation of views by region (ordered from largest to smallest):
 
@@ -356,7 +358,24 @@ The initial statistical audit reveals that the raw dataset is heavily skewed and
 
 ***Decision***: Based on this audit, it is impossible to draw reliable strategic conclusions from the raw data. To achieve Statistical Robustness, I will implement a 100,000 views floor filter to stabilize the metrics and focus the analysis on established market trends.
 
+### 4.1. High-Reliability Analysis: The 100k Views Benchmark
 
+```python
+df_pro = df_world_clean[df_world_clean['views'] > 100000].copy()
+
+stats_pro = df_pro[['views', 'engagement_rate']].agg(['mean', 'std']).transpose()
+stats_pro['CV'] = stats_pro['std'] / stats_pro['mean']
+
+print("--- Statistics with 100k Views Benchmark ---")
+print(stats_pro)
+
+```
+***Analysis result***: 
+
+| | Mean | Std | CV |
+| :---: | :---: | :---: | :---: |
+| Views | 2.20 M| 13.34 M | 6.06 |
+| engagement_rate |3.88%| 4.39% | 1.13 |
 
 
 ---
