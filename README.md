@@ -345,6 +345,16 @@ Deviation of views by region (ordered from largest to smallest):
 
 Name: views, dtype: float64
 
+***Audit Conclusion*** : The Case for Data Cleaning
+The initial statistical audit reveals that the raw dataset is heavily skewed and contains significant noise. This is evidenced by three main factors:
+
+- Mathematical Outliers: The Inf (Infinite) and NaN values in the Engagement Rate prove that the dataset includes videos with zero views. In a business context, these are "ghost entries" that break the calculation of any interaction KPI.
+
+- High Volatility (CV > 1): In engineering, a Coefficient of Variation (CV) above 1 indicates high dispersion. With a CV of 7.48 for views and 7.79 for comments, the "average" video is not representative of the platform. The data is dominated by a few viral hits and millions of low-performing videos.
+
+- Regional Disparity: The massive standard deviation in North America (CA, US, MX) suggests these regions are the primary sources of "outliers"—videos that reach hundreds of millions of views, distorting the global mean.
+
+***Decision***: Based on this audit, it is impossible to draw reliable strategic conclusions from the raw data. To achieve Statistical Robustness, I will implement a 100,000 views floor filter to stabilize the metrics and focus the analysis on established market trends.
 
 
 
