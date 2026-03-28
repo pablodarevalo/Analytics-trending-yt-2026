@@ -302,6 +302,31 @@ As previously identified, Music is the most impactful genre on the platform. The
 
 *Behavioral Trend*: After the midday peak, consumption gradually decreases until 23:00 UTC, where the cycle begins to trend upward again, marking the start of a new global interaction wave.
 
+### 4. Data Reliability: Statistical Validation
+
+Before drawing strategic conclusions, I performed a statistical audit to ensure the dataset's integrity. Raw data often contains "noise" (outliers or technical errors) that can lead to misleading insights.To ensure the validity of the insights, I performed a detailed study of Central Tendency (Mean) and Dispersion (Standard Deviation). This step is crucial to identify if the averages are representative of the real market or if they are being skewed by outliers.
+
+```python
+stats = df_world[['views', 'likes', 'engagement_rate']].agg(['mean', 'std']).transpose()
+
+stats['CV'] = stats['std'] / stats['mean']
+
+print("Global Dispersion Analysis:")
+print(stats)
+
+deviation_by_country = df_world.groupby('region')['views'].std().sort_values(ascending=False)
+print("\nDeviation of views by region (ordered from largest to smallest):")
+print(deviation_by_country)
+
+```
+***Analysis result***: 
+
+<img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/962ab237-7030-44da-ba66-096529fdfef5" />
+
+
+
+
+
 ---
 ## 📬 Contact
 * **Name:** Pablo Arévalo
