@@ -341,7 +341,8 @@ Deviation of views by region (ordered from largest to smallest):
 | JP |   5.255351e+06 |
 | RU |   4.882416e+06 |
 | IN |   4.439475e+06 |
- Name: views, dtype: float64
+
+Name: views, dtype: float64
 
 
 
