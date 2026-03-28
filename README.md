@@ -328,6 +328,7 @@ print(deviation_by_country)
 
 Deviation of views by region (ordered from largest to smallest):
 ***Region***:
+
 CA    1.576685e+07
 US    1.510751e+07
 MX    1.434949e+07
