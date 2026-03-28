@@ -377,6 +377,17 @@ print(stats_pro)
 | Views | 2.20 M| 13.34 M | 6.06 |
 | engagement_rate |3.88%| 4.39% | 1.13 |
 
+🏁 ***Final Summary: From Data to Decision-Making***
+
+The transition from the Raw Dataset to the 100k Views Benchmark represents more than just a filter; it is the application of engineering rigor to digital marketing.
+
+|Metric | Before (Raw) | After (100k Floor) | Improvement |
+| :---: | :---: | :---: | :---: | 
+| Engagement Rate | ❌ Broken (Inf) | ✅ 3.88%| Corrected |
+| Statistical Noise (CV) | 90.73 | 1.13 | 98.7% Reduction |
+|Reliability | Low (Anecdotal) | High (Strategic) | Verified |
+
+***Strategic Takeaway***: By stabilizing the Coefficient of Variation (CV) at 1.13, the analysis moved beyond "accidental viral hits" to uncover reproducible audience behavior. This project demonstrates that while anyone can observe raw YouTube metrics, only a rigorous, data-driven approach can pinpoint the 12:00 UTC Golden Window and identify the high-loyalty markets across Eurasia.
 
 ---
 ## 📬 Contact
