@@ -325,6 +325,7 @@ print(deviation_by_country)
 | :---: | :---: | :---: | :---: |
 | Views | 1.44 M | 10.81 M | 7.48 |
 | Likes |36.07 K| 126.96 K | 3.51 |
+| Comments | 1.25 K| 9.77 K | 7.79 |
 
 Deviation of views by region (ordered from largest to smallest):
 
