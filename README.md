@@ -321,7 +321,26 @@ print(deviation_by_country)
 ```
 ***Analysis result***: 
 
-<img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/962ab237-7030-44da-ba66-096529fdfef5" />
+| | Mean | Std | CV |
+| :--- | :---: | :---: | ---: |
+| Views | 1.444214e+06 | 1.081464e+07 | 7.488257 |
+| :--- | :---: | :---: | ---: |
+| Likes | 3.607090e+04  | 1.269590e+05 | 3.519707 |
+
+Deviation of views by region (ordered from largest to smallest):
+***Region***:
+CA    1.576685e+07
+US    1.510751e+07
+MX    1.434949e+07
+FR    1.393859e+07
+GB    1.384366e+07
+KR    8.506361e+06
+BR    6.605107e+06
+DE    5.303611e+06
+JP    5.255351e+06
+RU    4.882416e+06
+IN    4.439475e+06
+Name: views, dtype: float64
 
 
 
